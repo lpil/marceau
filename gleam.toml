@@ -2,7 +2,7 @@ name = "marceau"
 version = "1.0.0"
 description = "A MIME types library for Gleam"
 licences = ["Apache-2.0"]
-repository = { type = "github", user = "username", repo = "marceau" }
+repository = { type = "github", user = "lpil", repo = "marceau" }
 links = [
   { title = "Website", href = "https://gleam.run" },
   { title = "Sponsor", href = "https://github.com/sponsors/lpil" },
