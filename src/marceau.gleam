@@ -359,7 +359,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "jpgm" -> "video/jpm"
     "jpgv" -> "video/jpeg"
     "jpm" -> "video/jpm"
-    "js" -> "application/javascript"
+    "js" -> "text/javascript"
     "json" -> "application/json"
     "jsonml" -> "application/jsonml+json"
     "kar" -> "audio/midi"
@@ -442,6 +442,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "mime" -> "message/rfc822"
     "mj2" -> "video/mj2"
     "mjp2" -> "video/mj2"
+    "mjs" -> "text/javascript"
     "mk3d" -> "video/x-matroska"
     "mka" -> "audio/x-matroska"
     "mks" -> "video/x-matroska"
@@ -1027,7 +1028,7 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "application/java-archive" -> ["jar"]
     "application/java-serialized-object" -> ["ser"]
     "application/java-vm" -> ["class"]
-    "application/javascript" -> ["js"]
+    "application/javascript" -> ["js", "mjs"]
     "application/json" -> ["json"]
     "application/jsonml+json" -> ["jsonml"]
     "application/lost+xml" -> ["lostxml"]
@@ -1712,6 +1713,7 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "text/css" -> ["css"]
     "text/csv" -> ["csv"]
     "text/html" -> ["html", "htm"]
+    "text/javascript" -> ["js", "mjs"]
     "text/n3" -> ["n3"]
     "text/plain" -> ["txt", "text", "conf", "def", "list", "log", "in"]
     "text/prs.lines.tag" -> ["dsc"]
