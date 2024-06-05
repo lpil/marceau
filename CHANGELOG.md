@@ -1,8 +1,8 @@
 # Changelog
 
-## v1.1.1 - next
+## v1.2.0 - 2024-06-05
 
-- Add `wasm` extension for `application/wasm` mime type
+- Add `wasm` extension for `application/wasm` mime type.
 
 ## v1.1.0 - 2023-10-23
 
