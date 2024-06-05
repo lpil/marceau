@@ -879,6 +879,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "w3d" -> "application/x-director"
     "wad" -> "application/x-doom"
     "wav" -> "audio/x-wav"
+    "wasm" -> "application/wasm"
     "wax" -> "audio/x-ms-wax"
     "wbmp" -> "image/vnd.wap.wbmp"
     "wbs" -> "application/vnd.criticaltools.wbs+xml"
@@ -1485,6 +1486,7 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "application/vnd.zul" -> ["zir", "zirz"]
     "application/vnd.zzazz.deck+xml" -> ["zaz"]
     "application/voicexml+xml" -> ["vxml"]
+    "application/wasm" -> ["wasm"]
     "application/widget" -> ["wgt"]
     "application/winhlp" -> ["hlp"]
     "application/wsdl+xml" -> ["wsdl"]
