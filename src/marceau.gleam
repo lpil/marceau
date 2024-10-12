@@ -45,6 +45,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "atx" -> "application/vnd.antix.game-component"
     "au" -> "audio/basic"
     "avi" -> "video/x-msvideo"
+    "avif" -> "image/avif"
     "aw" -> "application/applixware"
     "azf" -> "application/vnd.airzip.filesecure.azf"
     "azs" -> "application/vnd.airzip.filesecure.azs"
@@ -273,6 +274,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "geo" -> "application/vnd.dynageo"
     "gex" -> "application/vnd.geometry-explorer"
     "ggb" -> "application/vnd.geogebra.file"
+    "ggs" -> "application/vnd.geogebra.slides"
     "ggt" -> "application/vnd.geogebra.tool"
     "ghf" -> "application/vnd.groove-help"
     "gif" -> "image/gif"
@@ -362,6 +364,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "js" -> "text/javascript"
     "json" -> "application/json"
     "jsonml" -> "application/jsonml+json"
+    "jxl" -> "image/jxl"
     "kar" -> "audio/midi"
     "karbon" -> "application/vnd.kde.karbon"
     "kfo" -> "application/vnd.kde.kformula"
@@ -404,6 +407,8 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "m1v" -> "video/mpeg"
     "m21" -> "application/mp21"
     "m2a" -> "audio/mpeg"
+    "m2t" -> "video/mp2t"
+    "m2ts" -> "video/mp2t"
     "m2v" -> "video/mpeg"
     "m3a" -> "audio/mpeg"
     "m3u" -> "audio/x-mpegurl"
@@ -489,7 +494,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "msi" -> "application/x-msdownload"
     "msl" -> "application/vnd.mobius.msl"
     "msty" -> "application/vnd.muvee.style"
-    "mts" -> "model/vnd.mts"
+    "mts" -> "video/mp2t"
     "mus" -> "application/vnd.musician"
     "musicxml" -> "application/vnd.recordare.musicxml+xml"
     "mvb" -> "application/x-msmediaview"
@@ -546,6 +551,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "opf" -> "application/oebps-package+xml"
     "opml" -> "text/x-opml"
     "oprc" -> "application/vnd.palm"
+    "opus" -> "audio/ogg"
     "org" -> "application/vnd.lotus-organizer"
     "osf" -> "application/vnd.yamaha.openscoreformat"
     "osfpvg" -> "application/vnd.yamaha.openscoreformat.osfpvg+xml"
@@ -805,6 +811,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "tr" -> "text/troff"
     "tra" -> "application/vnd.trueapp"
     "trm" -> "application/x-msterminal"
+    "ts" -> "video/mp2t"
     "tsd" -> "application/timestamped-data"
     "tsv" -> "text/tab-separated-values"
     "ttc" -> "font/collection"
@@ -903,7 +910,7 @@ pub fn extension_to_mime_type(extension: String) -> String {
     "wmlsc" -> "application/vnd.wap.wmlscriptc"
     "wmv" -> "video/x-ms-wmv"
     "wmx" -> "video/x-ms-wmx"
-    "wmz" -> "application/x-ms-wmz"
+    "wmz" -> "application/x-msmetafile"
     "woff" -> "font/woff"
     "woff2" -> "font/woff2"
     "wpd" -> "application/vnd.wordperfect"
@@ -1208,6 +1215,7 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "application/vnd.fuzzysheet" -> ["fzs"]
     "application/vnd.genomatix.tuxedo" -> ["txd"]
     "application/vnd.geogebra.file" -> ["ggb"]
+    "application/vnd.geogebra.slides" -> ["ggs"]
     "application/vnd.geogebra.tool" -> ["ggt"]
     "application/vnd.geometry-explorer" -> ["gex", "gre"]
     "application/vnd.geonext" -> ["gxt"]
@@ -1613,7 +1621,7 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "audio/midi" -> ["mid", "midi", "kar", "rmi"]
     "audio/mp4" -> ["m4a", "mp4a"]
     "audio/mpeg" -> ["mpga", "mp2", "mp2a", "mp3", "m2a", "m3a"]
-    "audio/ogg" -> ["oga", "ogg", "spx"]
+    "audio/ogg" -> ["oga", "ogg", "spx", "opus"]
     "audio/s3m" -> ["s3m"]
     "audio/silk" -> ["sil"]
     "audio/vnd.dece.audio" -> ["uva", "uvva"]
@@ -1651,12 +1659,14 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "font/ttf" -> ["ttf"]
     "font/woff" -> ["woff"]
     "font/woff2" -> ["woff2"]
+    "image/avif" -> ["avif"]
     "image/bmp" -> ["bmp"]
     "image/cgm" -> ["cgm"]
     "image/g3fax" -> ["g3"]
     "image/gif" -> ["gif"]
     "image/ief" -> ["ief"]
     "image/jpeg" -> ["jpeg", "jpg", "jpe"]
+    "image/jxl" -> ["jxl"]
     "image/ktx" -> ["ktx"]
     "image/png" -> ["png"]
     "image/prs.btif" -> ["btif"]
@@ -1704,7 +1714,6 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "model/vnd.dwf" -> ["dwf"]
     "model/vnd.gdl" -> ["gdl"]
     "model/vnd.gtw" -> ["gtw"]
-    "model/vnd.mts" -> ["mts"]
     "model/vnd.vtu" -> ["vtu"]
     "model/vrml" -> ["wrl", "vrml"]
     "model/x3d+binary" -> ["x3db", "x3dbz"]
@@ -1759,6 +1768,7 @@ pub fn mime_type_to_extensions(mime_type: String) -> List(String) {
     "video/jpeg" -> ["jpgv"]
     "video/jpm" -> ["jpm", "jpgm"]
     "video/mj2" -> ["mj2", "mjp2"]
+    "video/mp2t" -> ["ts", "m2t", "m2ts", "mts"]
     "video/mp4" -> ["mp4", "mp4v", "mpg4"]
     "video/mpeg" -> ["mpeg", "mpg", "mpe", "m1v", "m2v"]
     "video/ogg" -> ["ogv"]
