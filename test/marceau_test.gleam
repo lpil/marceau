@@ -1,5 +1,5 @@
-import gleam/list
 import gleam/io
+import gleam/list
 import gleeunit
 import marceau
 
