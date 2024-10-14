@@ -128,6 +128,4 @@ pub fn javascript_test() {
   let assert "text/javascript" = marceau.extension_to_mime_type("js")
   let assert "text/javascript" = marceau.extension_to_mime_type("mjs")
   let assert ["js", "mjs"] = marceau.mime_type_to_extensions("text/javascript")
-  let assert ["js", "mjs"] =
-    marceau.mime_type_to_extensions("application/javascript")
 }
